@@ -1,0 +1,223 @@
+body {
+    background-image: url(fondotruco.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    padding-top: 50px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.imagen {
+    width: 50%;
+    height: auto;
+}
+header, p {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300; 
+    color: white;
+
+}
+
+.tipografia-button1 {
+    background-color: #dca521;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+input::placeholder {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+#inicio {
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300; 
+    color: white;
+    padding: 50px;
+    background-color: rgba(2, 2, 2, 0.541);
+    border-radius: 10px;
+    margin: 40px auto 0 auto;
+    width: fit-content;
+    height: auto;
+}
+
+#inicio, .subtitulo {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300; 
+    color: white;
+}
+
+.boton-inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: start ;
+    align-items: start;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 50px; 
+    color: #dca521;
+    background-color: transparent;
+    border: none;
+    padding: 50px;
+}
+
+.boton-inicio:hover {
+    color: rgb(94, 62, 15);
+}
+
+#inicio.ocultar {
+    display: none;
+}
+
+#modalidad-torneo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300; 
+    color: white;
+    padding: 50px;
+    background-color: rgba(2, 2, 2, 0.541);
+    border-radius: 10px;
+    margin: 40px auto 0 auto;
+    width: fit-content;
+    height: auto;
+}
+
+.modalidad-button {
+    display: flex;
+    flex-direction: column;
+    color: #fc3;
+    background-color: transparent;
+    border: none;
+    padding: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+.modalidad-button:hover{
+    color: rgb(94, 62, 15);
+}
+
+#modalidad-torneo.ocultar {
+    display: none;
+}
+
+#cant-jugadores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300; 
+    color: white;
+    padding: 50px;
+    background-color: rgba(2, 2, 2, 0.541);
+    border-radius: 10px;
+    margin: 40px auto 0 auto;
+    width: fit-content;
+    height: auto;
+}
+
+#cant-jugadores.ocultar {
+    display: none;
+}
+
+#nombres {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300; 
+    color: white;
+    padding: 50px;
+    background-color: rgba(2, 2, 2, 0.541);
+    border-radius: 10px;
+    margin: 40px auto 0 auto;
+    width: fit-content;
+    height: auto;
+}
+
+section#nombres li {
+    margin-bottom: 10px;
+}
+
+#nombres.ocultar {
+    display: none;
+}
+
+#equipos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300; 
+    color: white;
+    padding: 100px;
+    background-color: rgba(2, 2, 2, 0.541);
+    border-radius: 10px;
+    margin: 40px auto 0 auto;
+    width: fit-content;
+    height: auto;
+}
+
+section#equipos li {
+    margin-bottom: 20px;
+}
+
+#equipos.ocultar {
+    display: none;
+}
+
+#partidos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300; 
+    color: white;
+    padding: 100px;
+    background-color: rgba(2, 2, 2, 0.541);
+    border-radius: 10px;
+    margin: 40px auto 0 auto;
+    width: fit-content;
+    height: auto; 
+}
+
+section#partidos li {
+    margin-bottom: 20px;
+}
+
+#partidos.ocultar {
+    display: none;
+}
+
+
+
+
+

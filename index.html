@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneador</title>
+</head>
+<body>
+    <header>
+        <img class="imagen" src="torneadortitulo1.png"> 
+        <p>Sorteá equipos y creá torneos al instante.</p>
+    </header>
+
+    <hr>
+
+    <div id="main"></div>
+    <section id="inicio">
+        <h2>Torneador, tu asistente en el truco!</h2>
+        <button id="armar-torneo" class="boton-inicio">Armar Torneo</button>
+        <p>Arma tu torneo con amigos!</p>
+        <button id="contador" class="boton-inicio">Contador</button>
+        <p>Sin trampa! Conta tus puntos durante el partido</p>
+    </section>
+
+    <section id="modalidad-torneo" class="ocultar">
+        <h2>Clickee en la modalidad  de los partidos del torneo (cuarto, sexto)</h2>
+        <button id="cuarto" class="modalidad-button">Cuarto</button> 
+        <button id="sexto" class="modalidad-button">Sexto</button>
+    </section>
+
+    <section id="cant-jugadores" class="ocultar">
+        <h2>Ingrese la cantidad de jugadores del torneo</h2>
+        <input type="number" id="input-cant-jugadores" placeholder="Cantidad de Jugadores">
+        <button id="aceptar-cantidad" class="tipografia-button1">Aceptar</button>
+    </section>
+
+    <section id="nombres" class="ocultar">
+        <h2>Ingrese los nombres de los jugadores del torneo</h2>
+        <ul id="lista-jugadores"></ul>
+        <button id="confirmar-jugadores" class="tipografia-button1">Confirmar</button>
+    </section>
+
+    <section id="equipos" class="ocultar">
+        <h2>Equipos Listos!</h2>
+        <ul id="lista-equipos"></ul>
+        <button id="confirmar-equipos" class="tipografia-button1">Confirmar</button>
+    </section>
+
+    <section id="partidos" class="ocultar">
+        <h2>Arrancan los partidos!</h2>
+        <ul id="listas-partidos"></ul>
+        <button id="partidos-finalizados" class="tipografia-button1">Partidos finalizados</button>
+    </section>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
