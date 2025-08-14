@@ -173,8 +173,8 @@ function torneoSexto (){
         nombresJugadores.length = 0;
         equiposArray.length = 0;
         listaJugadores.innerHTML = "";
-        if (cantJugadoresInt % 3 !=0){
-            alert("Ingrese numero multiplo de 3");
+        if (cantJugadoresInt % 3 !=0 || cantJugadoresInt <= 6){
+            alert("Ingrese numero multiplo de 3, minimo 6 jugadores");
         } else {
             nombres.classList.remove('ocultar'); //se elimina la class .oculto del id nombres para mostrar la seccion
             torneoOk.classList.add('ocultar');
