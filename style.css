@@ -242,9 +242,10 @@ section#equipos li {
     justify-content: center;
     align-items: center;
     font-family: 'Fira Sans', sans-serif;
-    font-weight: 300; 
+    font-size: 15px;
     color: white;
     background-color: rgba(2, 2, 2, 0.541);
+    padding-right: 5px;
     border-radius: 10px;
     margin: 40px auto 0 auto;
     height: auto; 
@@ -252,6 +253,7 @@ section#equipos li {
 
 section#partidos li {
     margin-bottom: auto;
+    margin-left: -20px;
 }
 
 #partidos.ocultar {
