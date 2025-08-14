@@ -1,51 +1,73 @@
 body {
     background-image: url(fondotruco.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     margin: 0;
     padding: 0;
     color: white;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 #main {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    height: 100%;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px;
 }
 
-header {
+.hr-inicio{
+    width: 150px;
+    margin: -25px;
+}
+
+.hr-fin {
+    width: 150px;
+    margin: 5px;
+}
+
+section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+}
+
+#titulo {
     text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
 }
 
 .imagen {
-    width: 50%;
+    width: 300px;
     height: auto;
-}
-header, p {
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Fira Sans', sans-serif;
-    font-weight: 300; 
-    color: white;
-
+    margin: 0 auto;
 }
 
-.tipografia-button1 {
-    background-color: #dca521;
-    margin: 10px;
+.aceptar-cantidad-button {
+    background-color: #53340c;
+    margin: 10px 0;
     border-radius: 5px;
     border: none;
     color: white;
+    padding: 1,5px;
+    font-size: 15px;
+    font-weight: bold;
     font-family: 'Fira Sans', sans-serif;
+    cursor: pointer;
+}
+
+.tipografia-button1:hover {
+    background-color: #b48619;
 }
 
 input::placeholder {
@@ -53,42 +75,54 @@ input::placeholder {
 }
 
 #inicio {
-    display: flex;
-    flex-direction: column;
-
-    font-family: 'Fira Sans', sans-serif;
-    font-weight: 300; 
     color: white;
-    padding: 50px;
+    padding: 40px;
     background-color: rgba(2, 2, 2, 0.541);
     border-radius: 10px;
+    padding: 15px;
+    padding-top: 45px;
     margin: 40px auto 0 auto;
-    width: fit-content;
-    height: auto;
-}
-
-#inicio, .subtitulo {
-    font-family: 'Fira Sans', sans-serif;
-    font-weight: 300; 
-    color: white;
+    text-align: left;
 }
 
 .boton-inicio {
-    display: flex;
-    flex-direction: column;
-    justify-content: start ;
-    align-items: start;
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 50px; 
+    font-size: 20px; 
     color: #dca521;
     background-color: transparent;
     border: none;
-    padding: 50px;
+    padding: 4px 0;
+    margin-right: auto;
+    margin: -20 0;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .boton-inicio:hover {
     color: rgb(94, 62, 15);
 }
+
+.item-inicio {
+    display: flex;
+    align-items: center; /* centra verticalmente icono y texto */
+    margin-bottom: 20px; /* espacio entre filas */
+}
+
+.texto-inicio {
+    display: flex;
+    flex-direction: column; /* apila botón y párrafo */
+    margin-left: 15px; /* separa el texto del icono */
+    align-items: start;
+    font-size: 15px;
+}
+
+.icono-redondo {
+    width: 50px;
+    height: 50px;
+    margin: 20px 0;
+    border-radius: 50%; /* para que sea redondo */
+    object-fit: cover;   /* ajusta la imagen al círculo */
+}
+
 
 #inicio.ocultar {
     display: none;
@@ -97,8 +131,9 @@ input::placeholder {
 #modalidad-torneo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
+    font-size: 15px;
     font-family: 'Fira Sans', sans-serif;
     font-weight: 300; 
     color: white;
@@ -106,19 +141,25 @@ input::placeholder {
     background-color: rgba(2, 2, 2, 0.541);
     border-radius: 10px;
     margin: 40px auto 0 auto;
-    width: fit-content;
     height: auto;
+    padding: 20px;
+}
+
+#modalidad-torneo h2 {
+    font-size: 15px;
+    padding-bottom: 20px;
+    padding-top: 0px;
 }
 
 .modalidad-button {
-    display: flex;
-    flex-direction: column;
-    color: #fc3;
+    font-size: 2rem; 
+    color: #dca521;
     background-color: transparent;
     border: none;
-    padding: 50px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    padding: 4px 0;
+    margin: -20px 0;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .modalidad-button:hover{
@@ -132,8 +173,9 @@ input::placeholder {
 #cant-jugadores {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    font-size: 15px;
     font-family: 'Fira Sans', sans-serif;
     font-weight: 300; 
     color: white;
@@ -141,7 +183,6 @@ input::placeholder {
     background-color: rgba(2, 2, 2, 0.541);
     border-radius: 10px;
     margin: 40px auto 0 auto;
-    width: fit-content;
     height: auto;
 }
 
@@ -155,13 +196,12 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     font-family: 'Fira Sans', sans-serif;
-    font-weight: 300; 
+    font-size: 15px;
     color: white;
     padding: 50px;
     background-color: rgba(2, 2, 2, 0.541);
     border-radius: 10px;
     margin: 40px auto 0 auto;
-    width: fit-content;
     height: auto;
 }
 
@@ -178,19 +218,18 @@ section#nombres li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
     font-family: 'Fira Sans', sans-serif;
-    font-weight: 300; 
     color: white;
-    padding: 100px;
     background-color: rgba(2, 2, 2, 0.541);
     border-radius: 10px;
-    margin: 40px auto 0 auto;
-    width: fit-content;
+    padding: 0;
+    margin: 40px 0px 0px 0px;
     height: auto;
 }
 
 section#equipos li {
-    margin-bottom: 20px;
+    margin-bottom: auto;
 }
 
 #equipos.ocultar {
@@ -205,71 +244,16 @@ section#equipos li {
     font-family: 'Fira Sans', sans-serif;
     font-weight: 300; 
     color: white;
-    padding: 100px;
     background-color: rgba(2, 2, 2, 0.541);
     border-radius: 10px;
     margin: 40px auto 0 auto;
-    width: fit-content;
     height: auto; 
 }
 
 section#partidos li {
-    margin-bottom: 20px;
+    margin-bottom: auto;
 }
 
 #partidos.ocultar {
     display: none;
 }
-
-@media (max-width: 768px) {
-    #main {
-        padding-top: 20px;
-    }
-    
-    header {
-        padding: 10px;
-        text-align: center;
-    }
-
-    .imagen {
-        width: 80%;
-        max-width: 300px;
-    }
-
-    #inicio, #modalidad-torneo, #cant-jugadores, #nombres, #equipos, #partidos {
-        width: 90%;
-        padding: 20px;
-        margin: 20px auto;
-        font-size: 16px;
-    }
-
-    .boton-inicio {
-        font-size: 28px;
-        padding: 20px;
-    }
-
-    .modalidad-button {
-        font-size: 20px;
-        padding: 20px;
-    }
-
-    section#nombres li, section#equipos li, section#partidos li {
-        margin-bottom: 8px;
-    }
-}
-
-@media (max-width:480px) {
-    .boton-inicio {
-        font-size: 22px;
-        padding: 15px;
-    }
-    .modalidad-button {
-        font-size: 18px;
-    }
-    .imagen {
-        width: 100%;
-    }
-}
-
-
-

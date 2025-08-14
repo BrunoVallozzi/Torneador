@@ -25,7 +25,6 @@ const formularioPartidos = document.getElementById('partidos');
 const listasPartidos = document.getElementById('listas-partidos');
 const partidosFinalizados = document.getElementById('partidos-finalizados');
 
-
 //crear torneo de parejas de a 2 
 function torneoCuarto (){
     modalidadTorneo.classList.add('ocultar');
@@ -39,8 +38,9 @@ function torneoCuarto (){
         nombresJugadores.length = 0;
         equiposArray.length = 0;
         listaJugadores.innerHTML = "";
-        if (cantJugadoresInt % 2 !=0){
-            alert("Ingrese numero multiplo de 2");
+        
+        if (cantJugadoresInt % 2 !=0 || cantJugadoresInt <=3){
+            alert("Ingrese numero multiplo de 2, minimo 4 jugadores");
         } else {
             nombres.classList.remove('ocultar'); //se elimina la class .oculto del id nombres para mostrar la seccion
             torneoOk.classList.add('ocultar');
@@ -66,12 +66,15 @@ function torneoCuarto (){
         // tomar todos los inputs con la clase 'input-jugador
         const inputs = document.querySelectorAll('.input-jugador') //creo un array 'inputs', donde guardo los inputs de clase '.input-jugador'
         nombresJugadores.length = 0;
-        inputs.forEach(function(input) { //forEach recorre todos los elementos que estan en inputs
+        for (const input of inputs){ //forEach recorre todos los elementos que estan en inputs
             const nombre = input.value.trim(); //input.value obtiene lo que el usuario guardo en el campo, y trim le quita los espacio en blanco al final y al prncipio, todo esto lo guardo en la const nombre
-            if (nombre !== "") {
-                nombresJugadores.push(nombre); // le agrego el elemento nombre al array
+            if (nombre === "") {
+                alert("Por favor, complete todos los campos");
+                return;
+            } else {
+                nombresJugadores.push(nombre);
             }
-        });
+        };
 
         function mezclar (array){
             for (let i = array.length-1;i>0;i--){
@@ -156,7 +159,6 @@ function torneoCuarto (){
 
 }
 
-
 //crear torneo de parejas de a 3
 function torneoSexto (){
     modalidadTorneo.classList.add('ocultar');
@@ -199,13 +201,15 @@ function torneoSexto (){
         // tomar todos los inputs con la clase 'input-jugador
         const inputs = document.querySelectorAll('.input-jugador') //creo un array 'inputs', donde guardo los inputs de clase '.input-jugador'
         nombresJugadores.length = 0;
-        inputs.forEach(function(input) { //forEach recorre todos los elementos que estan en inputs
+        for (const input of inputs){ //forEach recorre todos los elementos que estan en inputs
             const nombre = input.value.trim(); //input.value obtiene lo que el usuario guardo en el campo, y trim le quita los espacio en blanco al final y al prncipio, todo esto lo guardo en la const nombre
-            if (nombre !== "") {
-                nombresJugadores.push(nombre); // le agrego el elemento nombre al array
+            if (nombre === "") {
+                alert("Por favor, complete todos los campos");
+                return;
+            } else {
+                nombresJugadores.push(nombre);
             }
-
-        });
+        };
 
         function mezclar (array){
             for (let i = array.length-1;i>0;i--){

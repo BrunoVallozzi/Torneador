@@ -9,51 +9,64 @@
     <title>Torneador</title>
 </head>
 <body>
-    <header>
+    <div id="main">
+    <div id="titulo">
         <img class="imagen" src="torneadortitulo1.png"> 
-        <p>Sorteá equipos y creá torneos al instante.</p>
-    </header>
+    </div>
 
-    <hr>
+    <img src="hr.png" class="hr-inicio">
 
-    <div id="main"></div>
     <section id="inicio">
-        <h2>Torneador, tu asistente en el truco!</h2>
-        <button id="armar-torneo" class="boton-inicio">Armar Torneo</button>
-        <p>Arma tu torneo con amigos!</p>
-        <button id="contador" class="boton-inicio">Contador</button>
-        <p>Sin trampa! Conta tus puntos durante el partido</p>
+        <div class="item-inicio">
+            <img src="logoespada.jpg" class="icono-redondo">
+            <div class="texto-inicio">
+                <button id="armar-torneo" class="boton-inicio">Armar Torneo</button>
+                <p>Sorteá equipos y creá torneos al instante.</p>
+            </div>
+        </div>
+        
+        <div class="item-inicio">
+            <img src="logoanotador.jpg" class="icono-redondo">
+            <div class="texto-inicio">
+                <button id="contador" class="boton-inicio">Contador</button>
+                <p>Sin trampa! Conta tus puntos durante el partido.</p>
+            </div>
+        </div>
     </section>
 
     <section id="modalidad-torneo" class="ocultar">
-        <h2>Clickee en la modalidad  de los partidos del torneo (cuarto, sexto)</h2>
-        <button id="cuarto" class="modalidad-button">Cuarto</button> 
+        <h2>Seleccione la modalidad  de los partidos del torneo (cuarto, sexto)</h2>
+        <button id="cuarto" class="modalidad-button">Cuarto</button>
+        <p>Torneo con equipos de dos personas</p>
         <button id="sexto" class="modalidad-button">Sexto</button>
+        <p>Torneo con equipos de tres personas.</p>
     </section>
 
     <section id="cant-jugadores" class="ocultar">
         <h2>Ingrese la cantidad de jugadores del torneo</h2>
         <input type="number" id="input-cant-jugadores" placeholder="Cantidad de Jugadores">
-        <button id="aceptar-cantidad" class="tipografia-button1">Aceptar</button>
+        <button id="aceptar-cantidad" class="aceptar-cantidad-button">Aceptar</button>
     </section>
 
     <section id="nombres" class="ocultar">
         <h2>Ingrese los nombres de los jugadores del torneo</h2>
         <ul id="lista-jugadores"></ul>
-        <button id="confirmar-jugadores" class="tipografia-button1">Confirmar</button>
+        <button id="confirmar-jugadores" class="aceptar-cantidad-button">Confirmar</button>
     </section>
 
     <section id="equipos" class="ocultar">
         <h2>Equipos Listos!</h2>
         <ul id="lista-equipos"></ul>
-        <button id="confirmar-equipos" class="tipografia-button1">Confirmar</button>
+        <button id="confirmar-equipos" class="aceptar-cantidad-button">Confirmar</button>
     </section>
 
     <section id="partidos" class="ocultar">
         <h2>Arrancan los partidos!</h2>
         <ul id="listas-partidos"></ul>
-        <button id="partidos-finalizados" class="tipografia-button1">Partidos finalizados</button>
+        <button id="partidos-finalizados" class="aceptar-cantidad-button">Partidos finalizados</button>
     </section>
+
+    <img src="hr2.png" class="hr-fin">
 
     </div>
 
