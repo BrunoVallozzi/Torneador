@@ -1,17 +1,14 @@
 const armarTorneo = document.getElementById('armar-torneo');
 const inicio = document.getElementById('inicio');
-const modalidadTorneo = document.getElementById('modalidad-torneo')
-
-function modalidadTorneo1 () {
-    inicio.classList.add('ocultar'); //oculto la seccion inicio
-    modalidadTorneo.classList.remove('ocultar'); //agrego la seccion torneo, parte de cant-jugadores, eliminando la clase .ocultar que esta ocultando a la seccion
-}
-
-armarTorneo.addEventListener('click', modalidadTorneo1)
-
+const modalidadTorneo = document.getElementById('modalidad-torneo');
+const eliminarJugadorO = document.getElementById('eliminar-jugador-o');
+const eliminarJugador = document.getElementById('eliminar-jugador');
+const empezarArmar = document.getElementById('empezar-armar');
+const cantJugadoresInt0 = document.getElementById('input-cantidad-jugadores0');
+const cantEliminar = document.getElementById('input-cant-eliminar');
+const confirmarCantidad = document.getElementById('confirmar-cantidad');
 const sexto = document.getElementById('sexto');
 const cuarto = document.getElementById('cuarto');
-
 const torneoOk = document.getElementById('cant-jugadores');
 const cantJugadores = document.getElementById('input-cant-jugadores'); //para acceder a la cantidad de jugadores ingresado
 const aceptarCantidad = document.getElementById('aceptar-cantidad');
@@ -25,10 +22,23 @@ const formularioPartidos = document.getElementById('partidos');
 const listasPartidos = document.getElementById('listas-partidos');
 const partidosFinalizados = document.getElementById('partidos-finalizados');
 
+function comenzarTorneador () {
+    inicio.classList.add('ocultar');
+    modalidadTorneo.classList.remove('ocultar')
+}
+armarTorneo.addEventListener('click', comenzarTorneador)
+
 //crear torneo de parejas de a 2 
 function torneoCuarto (){
     modalidadTorneo.classList.add('ocultar');
-    torneoOk.classList.remove('ocultar');
+    eliminarJugadorO.classList.remove('ocultar');
+
+    function empezar (){
+        eliminarJugadorO.classList.add('ocultar');
+        torneoOk.classList.remove('ocultar');
+    }
+    
+    empezarArmar.addEventListener('click', empezar)
     
     const nombresJugadores = [];
     const equiposArray = [];

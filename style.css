@@ -152,7 +152,7 @@ input::placeholder {
 }
 
 .modalidad-button {
-    font-size: 2rem; 
+    font-size: 20px; 
     color: #dca521;
     background-color: transparent;
     border: none;
@@ -257,5 +257,45 @@ section#partidos li {
 }
 
 #partidos.ocultar {
+    display: none;
+}
+
+#eliminar-jugador-o {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    padding-top: 50px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color: rgba(2, 2, 2, 0.541);
+    border-radius: 10px;
+    margin: 40px auto 0 auto;
+}
+
+#eliminar-jugador-o.ocultar {
+    display: none;
+}
+
+#ruleta-eliminar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    padding-top: 50px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color: rgba(2, 2, 2, 0.541);
+    border-radius: 10px;
+    margin: 40px auto 0 auto;
+}
+
+#ruleta-eliminar {
     display: none;
 }
