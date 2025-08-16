@@ -20,7 +20,7 @@
         <div class="item-inicio">
             <img src="logoespada.jpg" class="icono-redondo">
             <div class="texto-inicio">
-                <button id="armar-torneo" class="boton-inicio">Armar Torneo</button>
+                <button id="armar-torneo-button" class="boton-inicio">Armar Torneo</button>
                 <p>Sorteá equipos y creá torneos al instante.</p>
             </div>
         </div>
@@ -32,6 +32,14 @@
                 <p>Sin trampa! Conta tus puntos durante el partido.</p>
             </div>
         </div>
+    </section>
+
+    <section id="modalidad-torneo" class="ocultar">
+        <h2>Seleccione la modalidad  de los partidos del torneo (cuarto, sexto)</h2>
+        <button id="cuarto" class="modalidad-button">Cuarto</button>
+        <p>Torneo con equipos de dos personas</p>
+        <button id="sexto" class="modalidad-button">Sexto</button>
+        <p>Torneo con equipos de tres personas.</p>
     </section>
 
     <section id="eliminar-jugador-o" class="ocultar">
@@ -48,12 +56,18 @@
         <button id="confirmar-cantidad" class="aceptar-cantidad-button">Confirmar Cantidad</button>
     </section>
 
-    <section id="modalidad-torneo" class="ocultar">
-        <h2>Seleccione la modalidad  de los partidos del torneo (cuarto, sexto)</h2>
-        <button id="cuarto" class="modalidad-button">Cuarto</button>
-        <p>Torneo con equipos de dos personas</p>
-        <button id="sexto" class="modalidad-button">Sexto</button>
-        <p>Torneo con equipos de tres personas.</p>
+    <section id="ruleta-eliminados" class="ocultar">
+        <h3>Ingrese los nombres de Jugadores</h3>
+        <ul id="lista-jugadores0"></ul>
+        <button id="confirmar-jugadores-ruleta" class="aceptar-cantidad-button">Confirmar</button>
+    </section>
+
+    <section id="equipos-eliminados" class="ocultar">
+        <h2>Equipos Listos!</h2>
+        <ul id="lista-equipos0"></ul>
+        <h3>Jugadores Eliminados</h3>
+        <ul id="jugadores-eliminados"></ul>
+        <button id="comenzar-partidos" class="aceptar-cantidad-button">Comenzar Partidos</button>
     </section>
 
     <section id="cant-jugadores" class="ocultar">
