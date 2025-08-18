@@ -132,7 +132,7 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    align-items: left;
+    align-items: flex-start;
     font-size: 15px;
     font-family: 'Fira Sans', sans-serif;
     font-weight: 300; 
@@ -334,4 +334,32 @@ section#partidos li {
 
 #equipos-eliminados.ocultar {
     display: none;
+}
+
+.opcion-torneo {
+    display: flex;
+    align-items: center; /* centra verticalmente icono y texto */
+    margin-bottom: 20px; /* espacio entre filas */
+}
+
+.opcion-torneo .info {
+    display: flex;
+    flex-direction: column; /* apila botón y párrafo */
+    margin-left: 15px; /* separa el texto del icono */
+    align-items: start;
+    font-size: 15px;
+}
+
+.anclar-imagenes {
+        display: flex;
+    align-items: center; /* centra verticalmente icono y texto */
+    margin-bottom: 20px; /* espacio entre filas */
+}
+
+.info-anclar {
+    display: flex;
+    flex-direction: column; /* apila botón y párrafo */
+    margin-left: 15px; /* separa el texto del icono */
+    align-items: start;
+    font-size: 15px;
 }

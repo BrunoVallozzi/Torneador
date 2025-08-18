@@ -12,7 +12,7 @@
     <div id="main">
     <div id="titulo">
         <img class="imagen" src="torneadortitulo1.png"> 
-    </div>
+    </div> 
 
     <img src="hr.png" class="hr-inicio">
 
@@ -26,7 +26,7 @@
         </div>
         
         <div class="item-inicio">
-            <img src="icono1.png" class="icono-redondo">
+            <img src="iconoanotador.png" class="icono-redondo">
             <div class="texto-inicio">
                 <button id="contador" class="boton-inicio">Contador</button>
                 <p>¡Sin trampa! Llevá el conteo de puntos en tiempo real durante tus partidos.</p>
@@ -37,17 +37,38 @@
     <section id="modalidad-torneo" class="ocultar">
         <h2>Seleccioná la modalidad del torneo</h2>
         <p class="p1">Elegí si los equipos serán de 2 (Cuarto) o 3 personas (Sexto).</p>
-        <button id="cuarto" class="modalidad-button">Cuarto</button>
-        <p>Equipos de 2 jugadores.</p>
-        <button id="sexto" class="modalidad-button">Sexto</button>
-        <p>Equipos de 3 jugadores.</p>
+        
+        <div class="opcion-torneo">
+            <img src="cuartologo.png" class="icono-redondo">
+            <div class="info">
+                <button id="cuarto" class="modalidad-button">Cuarto</button>
+                <p>Equipos de 2 jugadores.</p>
+            </div>
+        </div>
+        <div class="opcion-torneo">
+            <img src="sextoicono.png" class="icono-redondo">
+            <div class="info">
+                <button id="sexto" class="modalidad-button">Sexto</button>
+                <p>Equipos de 3 jugadores.</p>
+            </div>
+        </div>
     </section>
 
     <section id="eliminar-jugador-o" class="ocultar">
-        <button id="eliminar-jugador" class="modalidad-button">Eliminar Jugadores</button>
-        <p>¿Tenés jugadores de más? Seleccioná cuántos eliminar al azar.</p>
-        <button id="empezar-armar" class="modalidad-button">Comenzar torneo</button>
-        <p>¡Todo listo! Comenzá a armar tu torneo.</p>
+        <div class="anclar-imagenes">
+            <img src="iconocruz.png" class="icono-redondo">
+            <div class="info-anclar">
+                <button id="eliminar-jugador" class="modalidad-button">Eliminar Jugadores</button>
+                <p>¿Tenés jugadores de más? Seleccioná cuántos eliminar al azar.</p> 
+            </div>
+        </div>
+        <div class="anclar-imagenes">
+            <img src="listoicono.png" class="icono-redondo">
+            <div class="info-anclar">
+                <button id="empezar-armar" class="modalidad-button">Comenzar torneo</button>
+                <p>¡Todo listo! Comenzá a armar tu torneo.</p>
+            </div>
+        </div>
     </section>
 
     <section id="ruleta-eliminar" class="ocultar">
