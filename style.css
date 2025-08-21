@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;700&family=Lora:wght@400;700&display=swap');
+
 body {
     background-image: url(fondotruco.jpg);
     background-repeat: repeat;
@@ -6,8 +8,9 @@ body {
     background-position: center;
     margin: 0;
     padding: 0;
-    color: white;
+    color: #fff8e1;
     font-family: 'Fira Sans', sans-serif;
+    line-height: 1.5;
 }
 
 #main {
@@ -15,7 +18,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding-top: 80px;
+    padding: 100px 20px 50px 20px;
 }
 
 .hr-inicio{
@@ -33,24 +36,30 @@ section {
     flex-direction: column;
     align-items: flex-start;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.55);
-    border-radius: 10px;
-    width: 80%;
+    background-color: rgba(34, 30, 20, 0.55);
+    border-radius: 12px;
+    width: 85%;
     max-width: 600px;
     text-align: left;
+    padding: 25px 30px;
+    margin-bottom: 40px;
 }
 
 #titulo {
+    font-family: 'Lora', serif; /* rústico y llamativo */
     text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 40px;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #f4c95d; /* dorado cálido */
+    text-shadow: 1px 1px 2px #000;
 }
 
 .imagen {
     width: 300px;
     height: auto;
-    margin: 0 auto;
+    margin: 20px auto;
+    border-radius: 8px;
 }
 
 .aceptar-cantidad-button {
@@ -362,4 +371,175 @@ section#partidos li {
     margin-left: 15px; /* separa el texto del icono */
     align-items: start;
     font-size: 15px;
+}
+
+#item-contador {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+    background-color: rgba(2, 2, 2, 0.541);
+    color: #b48619;
+    border-radius: 10px;
+    margin: 40px auto 0 auto;
+    height: 640px;
+    gap: 10px;
+}
+
+#item-contador.ocultar {
+    display: none;
+}
+
+#jugadores-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    color: black;
+    padding: px;
+}
+
+#jugadores1Container, #jugadores2Container {
+    margin-top: -20px;
+    width: 100px;
+    height: 570px;
+    position: relative;
+}
+
+.divider {
+    width: 2px;       
+    background-color: white;
+    margin: -10px;
+}
+
+.linea-divisora {
+    border: none;           /* quitar borde por defecto */
+    height: 2px;             /* grosor */
+    background-color: white; /* color */
+    margin: 20px 0;   
+}
+
+.jugadorContainer h3 {
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+#mas-nos, #mas-ellos {
+    position: absolute;
+    background-color: #976421;
+    color: #fff8e1;
+    border-radius: 5px;
+    left: 10px;
+    margin-left: -5px;
+    height: 25px;
+    width: 25px;
+    bottom: 5px;
+    border: none;
+}
+
+#menos-nos, #menos-ellos{
+    position: absolute;
+    background-color: #976421;
+    color: #fff8e1;
+    border-radius: 5px;
+    margin-right: -5px;
+    right: 10px;
+    height: 25px;
+    width: 25px;
+    bottom: 5px;
+    border: none;
+}
+
+#grupo1 {
+    position: relative;
+}
+#grupo2 {
+    position: relative;
+}
+#grupo3 {
+    position: relative;
+}
+#grupo4 {
+    position: relative;
+}
+#grupo5 {
+    position: relative;
+}
+#grupo6 {
+    position: relative;
+}
+#grupo01 {
+    position: relative;
+}
+#grupo02 {
+    position: relative;
+}
+#grupo03 {
+    position: relative;
+}
+#grupo04 {
+    position: relative;
+}
+#grupo05 {
+    position: relative;
+}
+#grupo06 {
+    position: relative;
+}
+.fosforo {
+    height: 50px;
+    width: 7;
+    margin: 10px;
+}
+
+.fosforo-horizontal {
+    position: absolute;
+    bottom: 3px;
+    right: 90px;
+    transform: rotate(100deg) translate(-50%, -50%);
+    height: 90px;
+    width: 7px;
+}
+
+#nuevo-partido {
+    color: #976421;
+    background-color: white;
+    border-radius: 5px;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+#nuevo-contador {
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color: rgba(2, 2, 2, 0.541);
+    border-radius: 10px;
+    margin: 40px auto 0 auto;
+    width: fit-content;
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    top: 50%;
+    bottom: 20%;
+}
+
+#nuevo-contador.buttons {
+    display: row;
+}
+
+#nuevo-contador.ocultar {
+    display: none;
+}
+
+#aceptar {
+    margin: 10px;
+}
+
+#cancelar-nuevo-partido {
+    margin: 10px;
 }

@@ -30,6 +30,8 @@ const formularioPartidos = document.getElementById('partidos');
 const listasPartidos = document.getElementById('listas-partidos');
 const partidosFinalizados = document.getElementById('partidos-finalizados');
 const comenzarPartidos = document.getElementById('comenzar-partidos');
+const nombresJugadores = [];
+const equiposArray = [];
 
 function comenzarTorneador () {
     inicio.classList.add('ocultar');
@@ -48,15 +50,12 @@ function torneoCuarto (){
     }
     eliminarJugador.addEventListener('click', empezarRuleta);
 
-    const nombresJugadores0 = [];
-    const equiposArray0 = [];
-
     function inputsRuleta (){
         const cantJugadoresInt0 = parseInt(cantJugadoresInput0.value);
         const cantEliminarInt = parseInt(cantEliminar.value);
 
-        nombresJugadores0.length = 0;
-        listaJugadores0.innerHTML = "";
+        nombresJugadores.length = 0;
+        listaJugadores.innerHTML = "";
 
         if ((cantJugadoresInt0 - cantEliminarInt) % 2 != 0) {
             alert("NO conseguiras un numero par de jugadores para armar parejas");
@@ -80,21 +79,21 @@ function torneoCuarto (){
     function elegirEliminados() {
         listaEquipos0.innerHTML = "";
         jugadoresEliminados.innerHTML = "";
-        nombresJugadores0.length = 0;
-        equiposArray0.length = 0
+        nombresJugadores.length = 0;
+        equiposArray.length = 0
 
         const cantJugadoresInt01 = parseInt(cantJugadoresInput0.value);
         const inputs = document.querySelectorAll('.input-jugador');
-        nombresJugadores0.length = 0;
+        nombresJugadores.length = 0;
         for (const input of inputs){ //forEach recorre todos los elementos que estan en inputs
             const nombre = input.value.trim(); //input.value obtiene lo que el usuario guardo en el campo, y trim le quita los espacio en blanco al final y al prncipio, todo esto lo guardo en la const nombre
             if (nombre === "") {
                 alert("Por favor, complete todos los campos");
                 return;
             } else {
-                nombresJugadores0.push(nombre);
+                nombresJugadores.push(nombre);
             }
-        };
+        }
 
         function mezclar (array){
             for (let i = array.length-1;i>0;i--){
@@ -103,7 +102,7 @@ function torneoCuarto (){
             }
         }
 
-        mezclar(nombresJugadores0);
+        mezclar(nombresJugadores);
 
         let j = 0;
         const cantEliminarInt = parseInt(cantEliminar.value);
@@ -111,15 +110,15 @@ function torneoCuarto (){
 
         for (let i = 0; i < cantidadEquipos; i++){
             const equiposLi0 = document.createElement('li')
-            equiposLi0.textContent = `Equipo ${i+1}:`+' '+nombresJugadores0[j]+','+' '+nombresJugadores0[j+1];
+            equiposLi0.textContent = `Equipo ${i+1}:`+' '+nombresJugadores[j]+','+' '+nombresJugadores[j+1];
             listaEquipos0.appendChild(equiposLi0);
-            equiposArray.push([nombresJugadores0[j], nombresJugadores0[j+1]])
+            equiposArray.push([nombresJugadores[j], nombresJugadores[j+1]])
             j = j + 2
         }
         let k = 1;
-        for (let i = nombresJugadores0.length - 1; i >= nombresJugadores0.length-cantEliminarInt; i--) {
+        for (let i = nombresJugadores.length - 1; i >= nombresJugadores.length-cantEliminarInt; i--) {
             const jugadoresEliminadosLi = document.createElement('li');
-            jugadoresEliminadosLi.textContent = `Eliminado/s:`+" "+nombresJugadores0[i];
+            jugadoresEliminadosLi.textContent = `Eliminado/s:`+" "+nombresJugadores[i];
             jugadoresEliminados.appendChild(jugadoresEliminadosLi);
             k = k + 1;
         }
@@ -130,9 +129,6 @@ function torneoCuarto (){
     confirmarJugadoresRuleta.addEventListener('click', elegirEliminados);
 
     comenzarPartidos.addEventListener('click', armandoPartidos);
-
-    const nombresJugadores = [];
-    const equiposArray = [];
 
     function empezarTorneo() {
         eliminarJugadorO.classList.add('ocultar');
@@ -146,6 +142,11 @@ function torneoCuarto (){
         nombresJugadores.length = 0;
         equiposArray.length = 0;
         listaJugadores.innerHTML = "";
+        listaEquipos.innerHTML = "";
+        listasPartidos.innerHTML = "";
+        jugadoresEliminados.innerHTML = "";
+        listaJugadores0.innerHTML = "";
+        listaEquipos0.innerHTML = "";
         
         if (cantJugadoresInt % 2 !=0 || cantJugadoresInt <=3){
             alert("Ingrese numero multiplo de 2, minimo 4 jugadores");
@@ -174,6 +175,8 @@ function torneoCuarto (){
         // tomar todos los inputs con la clase 'input-jugador
         const inputs = document.querySelectorAll('.input-jugador') //creo un array 'inputs', donde guardo los inputs de clase '.input-jugador'
         nombresJugadores.length = 0;
+        equiposArray.length = 0;
+        listaEquipos.innerHTML = "";
         for (const input of inputs){ //forEach recorre todos los elementos que estan en inputs
             const nombre = input.value.trim(); //input.value obtiene lo que el usuario guardo en el campo, y trim le quita los espacio en blanco al final y al prncipio, todo esto lo guardo en la const nombre
             if (nombre === "") {
@@ -276,15 +279,12 @@ function torneoSexto() {
     }
     eliminarJugador.addEventListener('click', empezarRuleta);
 
-    const nombresJugadores0 = [];
-    const equiposArray0 = 0;
-
     function inputsRuleta (){
         const cantJugadoresInt0 = parseInt(cantJugadoresInput0.value);
         const cantEliminarInt = parseInt(cantEliminar.value);
 
-        nombresJugadores0.length = 0;
-        listaJugadores0.innerHTML = "";
+        nombresJugadores.length = 0;
+        listaJugadores.innerHTML = "";
 
         if ((cantJugadoresInt0 - cantEliminarInt) % 3 != 0) {
             alert("NO conseguiras armar equipos de 3 jugadores");
@@ -308,19 +308,19 @@ function torneoSexto() {
     function elegirEliminados() {
         listaEquipos0.innerHTML = "";
         jugadoresEliminados.innerHTML = "";
-        nombresJugadores0.length = 0;
-        equiposArray0.length = 0
+        nombresJugadores.length = 0;
+        equiposArray.length = 0
         
         const cantJugadoresInt01 = parseInt(cantJugadoresInput0.value);
         const inputs = document.querySelectorAll('.input-jugador');
-        nombresJugadores0.length = 0;
+        nombresJugadores.length = 0;
         for (const input of inputs){ //forEach recorre todos los elementos que estan en inputs
             const nombre = input.value.trim(); //input.value obtiene lo que el usuario guardo en el campo, y trim le quita los espacio en blanco al final y al prncipio, todo esto lo guardo en la const nombre
             if (nombre === "") {
                 alert("Por favor, complete todos los campos");
                 return;
             } else {
-                nombresJugadores0.push(nombre);
+                nombresJugadores.push(nombre);
             }
         };
 
@@ -331,7 +331,7 @@ function torneoSexto() {
             }
         }
 
-        mezclar(nombresJugadores0);
+        mezclar(nombresJugadores);
 
         let j = 0;
         const cantEliminarInt = parseInt(cantEliminar.value);
@@ -339,15 +339,15 @@ function torneoSexto() {
 
         for (let i = 0; i < cantidadEquipos; i++){
             const equiposLi0 = document.createElement('li')
-            equiposLi0.textContent = `Equipo ${i+1}:`+' '+nombresJugadores0[j]+','+','+nombresJugadores0[j+1]+','+nombresJugadores0[j+2];;
+            equiposLi0.textContent = `Equipo ${i+1}:`+' '+nombresJugadores[j]+','+' '+nombresJugadores[j+1]+','+' '+nombresJugadores[j+2];;
             listaEquipos0.appendChild(equiposLi0);
-            equiposArray.push([nombresJugadores0[j], nombresJugadores0[j+1]])
+            equiposArray.push([nombresJugadores[j], nombresJugadores[j+1]])
             j = j + 3
         }
         let k = 1;
-        for (let i = nombresJugadores0.length - 1; i >= nombresJugadores0.length-cantEliminarInt; i--) {
+        for (let i = nombresJugadores.length - 1; i >= nombresJugadores.length-cantEliminarInt; i--) {
             const jugadoresEliminadosLi = document.createElement('li');
-            jugadoresEliminadosLi.textContent = `Eliminado/s:`+" "+nombresJugadores0[i];
+            jugadoresEliminadosLi.textContent = `Eliminado/s:`+" "+nombresJugadores[i];
             jugadoresEliminados.appendChild(jugadoresEliminadosLi);
             k = k + 1;
         }
@@ -358,9 +358,6 @@ function torneoSexto() {
     confirmarJugadoresRuleta.addEventListener('click', elegirEliminados);
 
     comenzarPartidos.addEventListener('click', armandoPartidos);
-
-    const nombresJugadores = [];
-    const equiposArray = [];
 
     function empezarTorneo() {
         eliminarJugadorO.classList.add('ocultar');
@@ -494,13 +491,205 @@ function torneoSexto() {
 }
 
 sexto.addEventListener('click', torneoSexto); // al presionar en el boton sexto ejecuto la funcion torneoSexto
-
 cuarto.addEventListener('click', torneoCuarto);
 
+const inicioContador = document.getElementById('contador');
+const itemContador = document.getElementById('item-contador');
+const masNos = document.getElementById('mas-nos');
+const menosNos = document.getElementById('menos-nos');
+const masEllos = document.getElementById('mas-ellos');
+const menosEllos = document.getElementById('menos-ellos');
+const aceptar = document.getElementById('aceptar');
+const grupo1 = document.getElementById('grupo1');
+const grupo2 = document.getElementById('grupo2');
+const grupo3 = document.getElementById('grupo3');
+const grupo4 = document.getElementById('grupo4');
+const grupo5 = document.getElementById('grupo5');
+const grupo6 = document.getElementById('grupo6');
+const grupo01 = document.getElementById('grupo01');
+const grupo02 = document.getElementById('grupo02');
+const grupo03 = document.getElementById('grupo03');
+const grupo04 = document.getElementById('grupo04');
+const grupo05 = document.getElementById('grupo05');
+const grupo06 = document.getElementById('grupo06');
+const nuevoPartido = document.getElementById('nuevo-partido');
+const nuevoContador = document.getElementById('nuevo-contador');
+const cancelarNuevoPartido = document.getElementById('cancelar-nuevo-partido');
+let hrNos = null;
+let hrEllos = null;
+
+function iniciarContador (){
+    inicio.classList.add('ocultar');
+    itemContador.classList.remove('ocultar');
+    let cuentaNos = 0;
+    let grupoContadorNos = 0;
+    let cuentaEllos = 0;
+    let grupoContadorEllos = 0;
+
+    function agregar() {
+        console.log("Ejecutando");
+        cuentaNos++; // aumenta la variable global
+        grupoContadorNos++;
+    
+        // Crear imagen
+    const nuevoFosforo = document.createElement("img");
+
+    if (cuentaNos % 5 == 0) {
+            nuevoFosforo.src = "fosforo.png"; // tu ruta
+            nuevoFosforo.classList.add("fosforo-horizontal");
+    } else {
+    nuevoFosforo.src = "fosforo.png"; // tu ruta
+    nuevoFosforo.classList.add("fosforo");
+    }
+
+    if (grupoContadorNos <=5) {
+        grupo1.appendChild(nuevoFosforo);
+    } else if (grupoContadorNos <=10){
+        grupo2.appendChild(nuevoFosforo);
+    } else if (grupoContadorNos <=15){
+        grupo3.appendChild(nuevoFosforo);
+    } else if (grupoContadorNos <=20){
+        if (grupoContadorNos === 16) {
+            hrNos = document.createElement("hr");
+            grupo3.parentNode.insertBefore(hrNos, grupo4);
+        }
+        grupo4.appendChild(nuevoFosforo);
+    } else if (grupoContadorNos <=25){
+        grupo5.appendChild(nuevoFosforo);
+    } else if (grupoContadorNos <=30){
+        grupo6.appendChild(nuevoFosforo);
+    } 
+    
+    }
+
+    function restar() {
+        if (cuentaNos <= 0) return; // nada que restar
+        cuentaNos--;
+        grupoContadorNos--;
+
+        // Ver cuál es el último grupo con fósforos
+        let ultimoGrupo;
+        if (grupoContadorNos < 5) ultimoGrupo = grupo1;
+        else if (grupoContadorNos < 10) ultimoGrupo = grupo2;
+        else if (grupoContadorNos < 15) ultimoGrupo = grupo3;
+        else if (grupoContadorNos < 20) ultimoGrupo = grupo4;
+        else if (grupoContadorNos < 25) ultimoGrupo = grupo5;
+        else ultimoGrupo = grupo6;
+
+        // Eliminar el último fósforo del grupo correspondiente
+        if (ultimoGrupo.lastChild) {
+            ultimoGrupo.removeChild(ultimoGrupo.lastChild);
+        }
+    }
+
+    masNos.addEventListener('click', agregar);
+    menosNos.addEventListener('click', restar);
+    
+    function agregar2() {
+        console.log("Ejecutando");
+        cuentaEllos++; // aumenta la variable global
+        grupoContadorEllos++;
+    
+        // Crear imagen
+    const nuevoFosforo = document.createElement("img");
+
+    if (cuentaEllos % 5 == 0) {
+            nuevoFosforo.src = "fosforo.png"; // tu ruta
+            nuevoFosforo.classList.add("fosforo-horizontal");
+    } else {
+    nuevoFosforo.src = "fosforo.png"; // tu ruta
+    nuevoFosforo.classList.add("fosforo");
+    }
+
+    if (grupoContadorEllos <=5) {
+        grupo01.appendChild(nuevoFosforo);
+    } else if (grupoContadorEllos <=10){
+        grupo02.appendChild(nuevoFosforo);
+    } else if (grupoContadorEllos <=15){
+        grupo03.appendChild(nuevoFosforo);
+    } else if (grupoContadorEllos <=20){
+        if (grupoContadorEllos === 16) {
+            hrEllos = document.createElement("hr");
+            grupo03.parentNode.insertBefore(hrEllos, grupo04);
+        }
+        grupo04.appendChild(nuevoFosforo);
+    } else if (grupoContadorEllos <=25){
+        grupo05.appendChild(nuevoFosforo);
+    } else if (grupoContadorEllos <=30){
+        grupo06.appendChild(nuevoFosforo);
+    } 
+    
+    }
+
+    function restar2() {
+        if (cuentaEllos <= 0) return; // nada que restar
+        cuentaEllos--;
+        grupoContadorEllos--;
+
+        // Ver cuál es el último grupo con fósforos
+        let ultimoGrupo;
+        if (grupoContadorEllos < 5) ultimoGrupo = grupo01;
+        else if (grupoContadorEllos < 10) ultimoGrupo = grupo02;
+        else if (grupoContadorEllos < 15) ultimoGrupo = grupo03;
+        else if (grupoContadorEllos < 20) ultimoGrupo = grupo04;
+        else if (grupoContadorEllos < 25) ultimoGrupo = grupo05;
+        else ultimoGrupo = grupo06;
+
+        // Eliminar el último fósforo del grupo correspondiente
+        if (ultimoGrupo.lastChild) {
+            ultimoGrupo.removeChild(ultimoGrupo.lastChild);
+        }
+    }
+
+    masEllos.addEventListener('click', agregar2);
+    menosEllos.addEventListener('click', restar2);
+
+    function confirmarReset(){
+        nuevoContador.classList.remove('ocultar');
+
+    function aceptarFun() {
+        nuevoContador.classList.add('ocultar');
+        
+        cuentaNos = 0;
+        cuentaEllos = 0;
+        grupoContadorNos = 0;
+        grupoContadorEllos = 0;
+        
+        [grupo1, grupo2, grupo3, grupo4, grupo5, grupo6,
+            grupo01, grupo02, grupo03, grupo04, grupo05, grupo06]
+            .forEach(grupo => grupo.innerHTML = '');
+            
+        if (hrNos) { hrNos.remove(); hrNos = null; }
+        if (hrEllos) { hrEllos.remove(); hrEllos = null; }
+
+        }
+        
+    aceptar.addEventListener('click', aceptarFun);
+
+    function cancelarNuevo(){
+        nuevoContador.classList.add('ocultar');
+    }
+    
+    cancelarNuevoPartido.addEventListener('click', cancelarNuevo);
+
+    }
+    nuevoPartido.addEventListener('click', confirmarReset);
+
+    function cancelarNuevo(){
+    nuevoContador.classList.add('ocultar');
+    }
+    
+    cancelarNuevoPartido.addEventListener('click', cancelarNuevo);
+
+
+    
+}
+
+inicioContador.addEventListener('click', iniciarContador);
 
 
 
-
+ 
 
 
 
